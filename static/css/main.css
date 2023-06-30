@@ -23,6 +23,14 @@ body {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
 }
 
+.pw2 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
+}
+
 #time {
   font-size: 40px;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
@@ -31,6 +39,11 @@ body {
 #p1 {
   font-size: 10px;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
+}
+
+.rules-a {
+  width: 488px;
+  height: 582px;
 }
 
 .loading-screen {
