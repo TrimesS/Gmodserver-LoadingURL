@@ -52,6 +52,19 @@
     <!-- endbuild -->
 </body>
 <script>
-   
+   var images = ["../static/background01.jpg", "../static/background02.jpg", "../static/background03.jpg","../static/background04.jpg","../static/background05.jpg","../static/background07.jpg"];
+        var currentIndex = 0;
+        var delay = 6000;
+
+        var timer = setInterval(function() {
+            currentIndex++;
+         if (currentIndex >5) {
+                currentIndex = 0;
+         }
+        var imgurl = "url('" + images[currentIndex] + "')";
+        var img = document.getElementById("imgId");
+        
+        img.style.background = imgurl;
+        }, delay);
 </script>
 </html>

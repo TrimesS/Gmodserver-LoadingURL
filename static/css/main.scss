@@ -49,7 +49,7 @@ body {
 .loading-screen {
     $ls-width: 720px;
     $ls-section-margin: 25px;
-    $ls-text-color: #ececec;
+    $ls-text-color: #000000;
 
     width: 100%;
     height: 100%;
@@ -75,12 +75,14 @@ body {
         @include box-horizontal;
         // @include box-no-stretch;
 
-        .board {
+        .board  {
             $board-padding: 10px;
 
-            background-color: rgba(0, 0, 0, 0.77);
+            background-color: rgba(255, 255, 255, 0.77);
+            
+            backdrop-filter:blur(5px);
             border-radius: 5px;
-
+            
             @include box-flex(1);
 
             .title {
@@ -106,7 +108,7 @@ body {
     }
 
     .loading-bar {
-        $bar-height: 24px;
+        $bar-height: 44px;
         $bar-color: #3498db;
 
         width: $ls-width;
@@ -166,11 +168,14 @@ body {
         }
 
         .map-name,
-        .player-slots {
+        .player-slots,
+        .game-mode {
             @include single-line;
         }
     }
-
+.p2{
+    color: #000;
+}
     .server-rules {
         width: 140px;
 
@@ -182,7 +187,7 @@ body {
             $rule-padding-v: 8px;
             $rule-padding-h: 2.5em;
             $rule-height: 28px;
-
+            color: #000;
             >li {
                 padding: $rule-padding-v $rule-padding-h;
                 list-style: none;

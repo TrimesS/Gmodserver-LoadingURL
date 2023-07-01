@@ -24,7 +24,7 @@
         this.$.serverName = document.getElementById('servername');
         this.$.mapName = document.getElementById('mapname');
         this.$.playerSlots = document.getElementById('playerslots');
-
+        this.$.gamemode = document.getElementById('gamemode');
         this.updateProgress();
     };
 
@@ -48,13 +48,14 @@
      * Sets the server info data on the loading screen. This will be called on
      * the `GameDetails` loading screen event.
      */
-    LOAD.setServerInfo = function (serverName, mapName, maxPlayers) {
+    LOAD.setServerInfo = function (serverName, mapName, maxPlayers,gamemode) {
         // set map preview image
         // this.$.mapPreview.src = 'asset://mapimage/' + mapName;
 
         // gametracker.com map previews can also be used
         this.$.mapPreview.src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
 
+        this.$.gamemode.innerText = gamemode;
         this.$.mapName.innerText = mapName;
         this.$.serverName.innerText = serverName;
         this.$.playerSlots.innerText = maxPlayers + ' 玩家槽';
