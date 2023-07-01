@@ -8,8 +8,16 @@
     <link rel="stylesheet" href="../static/css/main.css">
     <!-- endbuild -->
 </head>
-<body>
+<body >
+    
+    <audio autoplay loop>
+        <source src="../static/music.mp3" type="audio/mp3">
+    </audio>
+
+    
+    
     <div class="loading-screen" id="imgId">
+        
         <header class="logo-container">
             <img src="../static/logo.png" alt="Logo">
         </header>
@@ -85,6 +93,21 @@
     <!-- endbuild -->
 </body>
 <script>
-   
+        var images = ["../static/background01.jpg", "../static/background02.jpg", "../static/background03.jpg","../static/background04.jpg","../static/background05.jpg","../static/background06.jpg","../static/background07.jpg"];
+        var currentIndex = 0;
+        var delay = 6000;
+
+        var timer = setInterval(function() {
+            currentIndex++;
+         if (currentIndex >6) {
+                currentIndex = 0;
+         }
+        var imgurl = "url('" + images[currentIndex] + "')";
+        var img = document.getElementById("imgId");
+        
+        img.style.background = imgurl;
+        }, delay);
+        
+       
 </script>
 </html>

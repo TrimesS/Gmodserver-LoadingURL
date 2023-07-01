@@ -23,6 +23,10 @@ body {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
 }
 
+#music-player {
+  display: none;
+}
+
 .pw2 {
   text-align: left;
   color: #ffffff;
@@ -51,6 +55,7 @@ body {
   height: 100%;
   background: url(../background01.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, sans-serif;
   display: -webkit-box;
   display: -moz-box;
