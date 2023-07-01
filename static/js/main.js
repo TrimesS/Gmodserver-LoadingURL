@@ -84,7 +84,7 @@
         this.filesNeeded = Math.max(0, this.filesNeeded - 1);
         this.updateProgress();
 
-        var status = '下载地图 ' + filePath + '中...';
+        var status = '下载文件 ' + filePath + '中...';
         this.onStatusChanged(status);
     };
 

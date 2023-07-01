@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   width: 100%;
@@ -48,6 +49,50 @@ body {
 .rules-a {
   width: 488px;
   height: 582px;
+}
+
+.music {
+  z-index: 9999;
+  width: 400px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.774);
+  backdrop-filter: blur(4px);
+  border-radius: 14px;
+  position: absolute;
+  top: 20px;
+  /* 距离顶部20px */
+  right: 20px;
+  /* 距离右侧20px */
+}
+
+.music img {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  bottom: 28px;
+  left: 18px;
+  transform: translate(-50%, -50%);
+  animation: rotate 4s linear infinite;
+  /* 2s 为旋转一周的时间 */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.music p {
+  position: absolute;
+  left: 100px;
+  color: #000;
+}
+
+#song {
+  color: #000;
 }
 
 .loading-screen {
@@ -115,12 +160,12 @@ body {
   width: 720px;
   height: 44px;
   position: relative;
-  background-color: rgba(31, 93, 134, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
 }
 
 .loading-screen .loading-bar .progress-bar {
-  background-color: #3498db;
+  background-color: rgba(160, 160, 160, 0.87);
   border-radius: 10px;
   position: absolute;
   top: 0;
@@ -157,6 +202,7 @@ body {
 
 .loading-screen .server-info {
   width: 140px;
+  color: #000;
 }
 
 .loading-screen .server-info .preview {
@@ -169,6 +215,7 @@ body {
 .loading-screen .server-info .map-name,
 .loading-screen .server-info .player-slots,
 .loading-screen .server-info .game-mode {
+  color: #000;
   white-space: nowrap;
   text-overflow: clip;
   overflow: hidden;

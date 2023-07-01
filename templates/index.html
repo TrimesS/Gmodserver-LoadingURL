@@ -23,6 +23,13 @@
         </header>
 
         <div class="content-container">
+            <div class="music">
+                <img src="../static/music.png"/>
+                <p style="font-style: bold;">正在播放的是</p>
+                <br>
+                <br>
+                <p id="song">正在播放的是</p>
+            </div>
             <section class="board server-info">
                 <header class="title">服务器信息</header>
                 <div class="content">
@@ -45,7 +52,7 @@
                     <li>藤原明浦さん</li>
                 </ol>
                 <header class="title">合集链接</header>
-                <p class="p2">这里什么都没有。</p>
+                <p class="p2"> &nbsp; 这里什么都没有。</p>
             </section>
             <p>&nbsp</p>
             <section class="board server-rules">
@@ -94,13 +101,13 @@
     <!-- endbuild -->
 </body>
 <script>
-        var images = ["../static/background01.jpg", "../static/background02.jpg", "../static/background03.jpg","../static/background04.jpg","../static/background05.jpg","../static/background06.jpg","../static/background07.jpg"];
+        var images = ["../static/background01.jpg", "../static/background02.jpg", "../static/background03.jpg","../static/background04.jpg","../static/background05.jpg","../static/background07.jpg"];
         var currentIndex = 0;
         var delay = 6000;
 
         var timer = setInterval(function() {
             currentIndex++;
-         if (currentIndex >6) {
+         if (currentIndex >5) {
                 currentIndex = 0;
          }
         var imgurl = "url('" + images[currentIndex] + "')";
@@ -109,6 +116,7 @@
         img.style.background = imgurl;
         }, delay);
         
-       
+        var songs = {song:"music.mp3",name:'不思議なお祓い棒 - 上海アリス幻樂団'};
+       document.getElementById("song").innerHTML = songs.name;
 </script>
 </html>

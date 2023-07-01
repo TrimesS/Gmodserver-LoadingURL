@@ -46,6 +46,42 @@ body {
     width:488px;
     height: 582px;
 }
+.music{
+    z-index: 9999;
+    width: 400px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.774);
+    backdrop-filter: blur(4px);
+    border-radius:14px;
+    position: absolute;
+    top: 20px; /* 距离顶部20px */
+    right: 20px; /* 距离右侧20px */
+}
+.music img{
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    bottom:28px;
+    left:18px;
+    transform: translate(-50%, -50%);
+    animation: rotate 4s linear infinite; /* 2s 为旋转一周的时间 */
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.music p{
+    position: absolute;
+    left:100px;
+    color: #000;
+}
+#song{
+    color: #000;
+}
 .loading-screen {
     $ls-width: 720px;
     $ls-section-margin: 25px;
@@ -116,10 +152,10 @@ body {
 
         position: relative;
 
-        background-color: rgba(31, 93, 134, 0.8);
+        background-color: rgba(255, 255, 255, 0.7);
         border-radius:10px;
         .progress-bar {
-            background-color: rgb(52,152,219);
+            background-color: rgba(160, 160, 160, 0.87);
             border-radius:10px;
             position: absolute;
             top: 0;
@@ -156,10 +192,9 @@ body {
             right: 0;
         }
     }
-
     .server-info {
         width: 140px;
-
+        color: #000;
         .preview {
             width: 128px;
             height: 128px;
@@ -170,6 +205,7 @@ body {
         .map-name,
         .player-slots,
         .game-mode {
+            color: #000;
             @include single-line;
         }
     }
