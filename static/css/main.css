@@ -37,8 +37,22 @@ body {
 }
 
 #time {
-  font-size: 40px;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,2px 2px 0 #000;
+  font-size: 30px;
+  color: #000;
+  left: 3px;
+}
+
+#time-div {
+  height: 120px;
+  width: 600px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.77);
+  border: #ffffff solid 3px;
+  border-radius: 3px;
 }
 
 #p1 {
